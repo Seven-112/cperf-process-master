@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    
+    <!--
+        Added the entity Process.
+    -->
+    <changeSet id="20211014140034-1" author="jhipster">
+        <createTable tableName="process">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="label" type="${clobType}">
+                <constraints nullable="false" />
+            </column>
+            <column name="description" type="${clobType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="priority_level" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="valid" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="preview_start_at" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="start_at" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="preview_finish_at" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="finished_at" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="created_at" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="start_count" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="model_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="editor_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="procedure_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="runnable_process_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="query_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="canceled_at" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="category_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="process" columnName="preview_start_at" columnDataType="datetime"/>
+        <dropDefaultValue tableName="process" columnName="start_at" columnDataType="datetime"/>
+        <dropDefaultValue tableName="process" columnName="preview_finish_at" columnDataType="datetime"/>
+        <dropDefaultValue tableName="process" columnName="finished_at" columnDataType="datetime"/>
+        <dropDefaultValue tableName="process" columnName="created_at" columnDataType="datetime"/>
+        <dropDefaultValue tableName="process" columnName="canceled_at" columnDataType="datetime"/>
+    </changeSet>
+
+    <changeSet id="20211014140034-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20211014140034-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/process.csv"
+                  separator=";"
+                  tableName="process">
+            <column name="id" type="numeric"/>
+            <column name="label" type="clob"/>
+            <column name="description" type="clob"/>
+            <column name="priority_level" type="string"/>
+            <column name="valid" type="boolean"/>
+            <column name="preview_start_at" type="datetime"/>
+            <column name="start_at" type="datetime"/>
+            <column name="preview_finish_at" type="datetime"/>
+            <column name="finished_at" type="datetime"/>
+            <column name="created_at" type="datetime"/>
+            <column name="start_count" type="numeric"/>
+            <column name="model_id" type="numeric"/>
+            <column name="editor_id" type="numeric"/>
+            <column name="procedure_id" type="numeric"/>
+            <column name="runnable_process_id" type="numeric"/>
+            <column name="query_id" type="numeric"/>
+            <column name="canceled_at" type="datetime"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

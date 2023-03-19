@@ -1,0 +1,63 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "microprocess",
+  "relationships": [
+    {
+      "relationshipName": "process",
+      "otherEntityName": "process",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id",
+      "otherEntityRelationshipName": "eventTrigger"
+    }
+  ],
+  "fields": [
+    {
+      "fieldName": "editorId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recurrence",
+      "fieldType": "ProcessEventRecurrence",
+      "fieldValues": "ONCE,ALLAWAYS,WEEK,EVERY_WEEK_ON_DAY,EVERY_YEAR_ON_DATE,EVERY_MONTH_OF_DAY_POSITION"
+    },
+    {
+      "fieldName": "disabled",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "editorName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "firstStartedAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nextStartAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "startCount",
+      "fieldType": "Integer"
+    }
+  ],
+  "changelogDate": "20211205071554",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "serviceClass",
+  "entityTableName": "event_trigger",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": true,
+  "pagination": "pagination",
+  "microserviceName": "microprocess"
+}

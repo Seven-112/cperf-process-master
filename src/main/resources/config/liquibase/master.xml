@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql, mariadb"/>
+    <property name="clobType" value="longvarchar" dbms="h2"/>
+    <property name="clobType" value="clob" dbms="mysql, oracle, mssql, mariadb, postgresql"/>
+    <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014140034_added_entity_Process.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014142613_added_entity_Task.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014145010_added_entity_CondNode.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014151732_added_entity_TaskStatusTrakingFile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014144230_added_entity_TaskValidationControl.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014145823_added_entity_EdgeInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014150520_added_entity_PublicHoliday.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014151439_added_entity_TaskStatusTraking.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014150827_added_entity_WorkCalender.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014150213_added_entity_Justification.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014143125_added_entity_TaskFile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014143439_added_entity_TaskSubmission.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014150347_added_entity_Procedure.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014143859_added_entity_TaskUser.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211020113441_added_entity_ProcessCategory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211205071554_added_entity_EventTrigger.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211207203746_added_entity_TaskItem.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211208174956_added_entity_ItemCheckJustification.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211208175216_added_entity_ItemCheckJustificationFile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220123224203_added_entity_ProcessCategoryUser.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220401154209_added_entity_StartableTask.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221014142613_added_entity_TaskPauseHistory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221120081032_added_entity_KPI.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20211014142613_added_entity_constraints_Task.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014151732_added_entity_constraints_TaskStatusTrakingFile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014144230_added_entity_constraints_TaskValidationControl.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014143125_added_entity_constraints_TaskFile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014143439_added_entity_constraints_TaskSubmission.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014143859_added_entity_constraints_TaskUser.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211014140034_added_entity_constraints_Process.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211205071554_added_entity_constraints_EventTrigger.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+    <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
+</databaseChangeLog>

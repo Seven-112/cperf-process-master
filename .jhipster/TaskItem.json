@@ -1,0 +1,61 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "microprocess",
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "taskId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "checked",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "checkerId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "checkerName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "checkerEmail",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "editorId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "editorEmail",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "editorName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "required",
+      "fieldType": "Boolean"
+    }
+  ],
+  "changelogDate": "20211207203746",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "serviceClass",
+  "entityTableName": "task_item",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": true,
+  "pagination": "pagination",
+  "microserviceName": "microprocess"
+}

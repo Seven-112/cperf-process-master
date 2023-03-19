@@ -1,0 +1,40 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "microprocess",
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "taskId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "pausedAt",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "restartedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "oldTaskstatus",
+      "fieldType": "TaskStatus",
+      "fieldValues": "VALID,STARTED,COMPLETED,CANCELED,SUBMITTED,EXECUTED,ON_PAUSE"
+    },
+    {
+      "fieldName": "taskExecutionDeleyExeceed",
+      "fieldType": "Boolean"
+    }
+  ],
+  "changelogDate": "20221014142613",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "serviceClass",
+  "entityTableName": "task_pause_histories",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": true,
+  "pagination": "pagination",
+  "microserviceName": "microprocess"
+}

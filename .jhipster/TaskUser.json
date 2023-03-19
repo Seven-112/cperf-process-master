@@ -1,0 +1,45 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "microprocess",
+  "relationships": [
+    {
+      "relationshipName": "task",
+      "otherEntityName": "task",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"],
+      "otherEntityField": "id",
+      "otherEntityRelationshipName": "taskUser"
+    }
+  ],
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "role",
+      "fieldType": "TaskUserRole",
+      "fieldValues": "EXCEUTOR,VALIDATOR,SUBMITOR",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "userFullName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "userEmail",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20211014143859",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "serviceClass",
+  "entityTableName": "task_user",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": true,
+  "pagination": "pagination",
+  "microserviceName": "microprocess"
+}

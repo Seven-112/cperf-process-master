@@ -1,0 +1,54 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "microprocess",
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "triggerTaskId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "startableTaskId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "triggerTaskName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "startableTaskName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "triggerProcessName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "startableProcessName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "startCond",
+      "fieldType": "StartableTaskCond",
+      "fieldValues": "LOOPBACK,TRIGGER_VALIDATED,TRIGGER_CANCELED"
+    }
+  ],
+  "changelogDate": "20220401154209",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "serviceClass",
+  "entityTableName": "startable_tasks",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": true,
+  "pagination": "pagination",
+  "microserviceName": "microprocess"
+}

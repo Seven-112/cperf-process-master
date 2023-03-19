@@ -1,0 +1,41 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "microprocess",
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "source",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "target",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sourceHandle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "targetHandle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "processId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "valid",
+      "fieldType": "Boolean"
+    }
+  ],
+  "changelogDate": "20211014145823",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "serviceClass",
+  "entityTableName": "edge_info",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": true,
+  "pagination": "pagination",
+  "microserviceName": "process"
+}

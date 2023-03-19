@@ -1,0 +1,89 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "microprocess",
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dte",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "executed",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "executedRate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "executedLate",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "executedLateRate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "totalExecuted",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "totalExecutedRate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "started",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "startedRate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "startedLate",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "startedLateRate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "totalStarted",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "totalStartedRate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "noStarted",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "noStartedRate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "executionLevel",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "executionLevelRate",
+      "fieldType": "Float"
+    }
+  ],
+  "changelogDate": "20221120081032",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "serviceClass",
+  "entityTableName": "kpis",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": true,
+  "pagination": "pagination",
+  "microserviceName": "microprocess"
+}

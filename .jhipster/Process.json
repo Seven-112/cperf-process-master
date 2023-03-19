@@ -1,0 +1,93 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "microprocess",
+  "relationships": [
+    {
+      "relationshipName": "category",
+      "otherEntityName": "processCategory",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id",
+      "otherEntityRelationshipName": "process"
+    }
+  ],
+  "fields": [
+    {
+      "fieldName": "label",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "priorityLevel",
+      "fieldType": "ProcessPriority",
+      "fieldValues": "VERYHIGTH,HIGHT,LOW,VERYLOW"
+    },
+    {
+      "fieldName": "valid",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "previewStartAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "startAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "previewFinishAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "finishedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "startCount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "modelId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "editorId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "procedureId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "runnableProcessId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "queryId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "canceledAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "changelogDate": "20211014140034",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "serviceClass",
+  "entityTableName": "process",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": true,
+  "pagination": "pagination",
+  "microserviceName": "microprocess"
+}

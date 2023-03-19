@@ -1,0 +1,1 @@
+id;name;description;nb_minuites;nb_hours;nb_days;nb_months;nb_years;start_at;status;priority_level;type;valid;finish_at;start_with_process;process_id;parent_id;task_model_id;pause_at;nb_pause;logigram_pos_x;logigram_pos_y;group_id;risk_id;manual_mode;sheduled_start_at;sheduled_start_hour;sheduled_start_minute;checked;current_pause_history_id;exceceed

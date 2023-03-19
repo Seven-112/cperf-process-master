@@ -1,0 +1,33 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "microprocess",
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "logigramPosX",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "logigramPosY",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "processId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "modelId",
+      "fieldType": "Long"
+    }
+  ],
+  "changelogDate": "20211014145010",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "serviceClass",
+  "entityTableName": "cond_node",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": true,
+  "pagination": "pagination",
+  "microserviceName": "microprocess"
+}

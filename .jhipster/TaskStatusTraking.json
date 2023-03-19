@@ -1,0 +1,53 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "microprocess",
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "taskId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "TaskStatus",
+      "fieldValues": "VALID,STARTED,COMPLETED,CANCELED,SUBMITTED,ON_PAUSE",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tracingAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "justification",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "editable",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "execeed",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "perfIndicator",
+      "fieldType": "Boolean"
+    }
+  ],
+  "changelogDate": "20211014151439",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "serviceClass",
+  "entityTableName": "task_status_traking",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": true,
+  "pagination": "pagination",
+  "microserviceName": "microprocess"
+}

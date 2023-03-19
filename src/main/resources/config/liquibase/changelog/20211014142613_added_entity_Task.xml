@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    
+    <!--
+        Added the entity Task.
+    -->
+    <changeSet id="20211014142613-1" author="jhipster">
+        <createTable tableName="task">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="description" type="${clobType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="nb_minuites" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="nb_hours" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="nb_days" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="nb_months" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="nb_years" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="start_at" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="status" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="priority_level" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="valid" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="finish_at" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="start_with_process" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="process_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="parent_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="task_model_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="pause_at" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="nb_pause" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="logigram_pos_x" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="logigram_pos_y" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="group_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="risk_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="manual_mode" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="sheduled_start_at" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="sheduled_start_hour" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="sheduled_start_minute" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="checked" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="current_pause_history_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="exceceed" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="startup_task_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="task" columnName="start_at" columnDataType="datetime"/>
+        <dropDefaultValue tableName="task" columnName="finish_at" columnDataType="datetime"/>
+        <dropDefaultValue tableName="task" columnName="pause_at" columnDataType="datetime"/>
+    </changeSet>
+
+    <changeSet id="20211014142613-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20211014142613-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/task.csv"
+                  separator=";"
+                  tableName="task">
+            <column name="id" type="numeric"/>
+            <column name="name" type="string"/>
+            <column name="description" type="clob"/>
+            <column name="nb_minuites" type="numeric"/>
+            <column name="nb_hours" type="numeric"/>
+            <column name="nb_days" type="numeric"/>
+            <column name="nb_months" type="numeric"/>
+            <column name="nb_years" type="numeric"/>
+            <column name="start_at" type="datetime"/>
+            <column name="status" type="string"/>
+            <column name="priority_level" type="string"/>
+            <column name="type" type="string"/>
+            <column name="valid" type="boolean"/>
+            <column name="finish_at" type="datetime"/>
+            <column name="start_with_process" type="boolean"/>
+            <column name="process_id" type="numeric"/>
+            <column name="parent_id" type="numeric"/>
+            <column name="task_model_id" type="numeric"/>
+            <column name="pause_at" type="datetime"/>
+            <column name="nb_pause" type="numeric"/>
+            <column name="logigram_pos_x" type="numeric"/>
+            <column name="logigram_pos_y" type="numeric"/>
+            <column name="group_id" type="numeric"/>
+            <column name="risk_id" type="numeric"/>
+            <column name="manual_mode" type="boolean"/>
+            <column name="sheduled_start_at" type="date"/>
+            <column name="sheduled_start_hour" type="numeric"/>
+            <column name="sheduled_start_minute" type="numeric"/>
+            <column name="checked" type="boolean"/>
+            <column name="current_pause_history_id" type="numeric"/>
+            <column name="exceceed" type="boolean"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

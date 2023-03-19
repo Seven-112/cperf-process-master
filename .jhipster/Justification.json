@@ -1,0 +1,47 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "microprocess",
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "content",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "fileId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "taskId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "processId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "reason",
+      "fieldType": "JustifcationReason",
+      "fieldValues": "NOSTARTED,CANCELED,LATER_COMPLETED,LATER_UNFINISH"
+    },
+    {
+      "fieldName": "accepted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "editorId",
+      "fieldType": "Long"
+    }
+  ],
+  "changelogDate": "20211014150213",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "serviceClass",
+  "entityTableName": "justification",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": true,
+  "pagination": "pagination",
+  "microserviceName": "microprocess"
+}

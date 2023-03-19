@@ -1,0 +1,150 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "microprocess",
+  "relationships": [
+    {
+      "relationshipName": "startupTask",
+      "otherEntityName": "task",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id",
+      "otherEntityRelationshipName": "task"
+    }
+  ],
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "nbMinuites",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "nbHours",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "nbDays",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "nbMonths",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "nbYears",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "startAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "TaskStatus",
+      "fieldValues": "VALID,STARTED,COMPLETED,CANCELED,SUBMITTED,ON_PAUSE"
+    },
+    {
+      "fieldName": "priorityLevel",
+      "fieldType": "ProcessPriority",
+      "fieldValues": "VERYHIGTH,HIGHT,LOW,VERYLOW"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "TaskType",
+      "fieldValues": "START,ACTIVITY,SUBACTIVITY,DOC,END"
+    },
+    {
+      "fieldName": "valid",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "finishAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "startWithProcess",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "processId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "parentId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "taskModelId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "pauseAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "nbPause",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "logigramPosX",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "logigramPosY",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "groupId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "riskId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "manualMode",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "sheduledStartAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "sheduledStartHour",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "sheduledStartMinute",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "checked",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "currentPauseHistoryId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "exceceed",
+      "fieldType": "Boolean"
+    }
+  ],
+  "changelogDate": "20211014142613",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "serviceClass",
+  "entityTableName": "task",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": true,
+  "pagination": "pagination",
+  "microserviceName": "microprocess"
+}

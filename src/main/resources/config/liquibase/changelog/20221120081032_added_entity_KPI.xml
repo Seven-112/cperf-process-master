@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    
+    <!--
+        Added the entity KPI.
+    -->
+    <changeSet id="20221120081032-1" author="jhipster">
+        <createTable tableName="kpis">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="dte" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="executed" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="executed_rate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="executed_late" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="executed_late_rate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="total_executed" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="total_executed_rate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="started" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="started_rate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="started_late" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="started_late_rate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="total_started" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="total_started_rate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="no_started" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="no_started_rate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="execution_level" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="execution_level_rate" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20221120081032-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20221120081032-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/kpis.csv"
+                  separator=";"
+                  tableName="kpis">
+            <column name="id" type="numeric"/>
+            <column name="user_id" type="numeric"/>
+            <column name="dte" type="date"/>
+            <column name="executed" type="numeric"/>
+            <column name="executed_rate" type="numeric"/>
+            <column name="executed_late" type="numeric"/>
+            <column name="executed_late_rate" type="numeric"/>
+            <column name="total_executed" type="numeric"/>
+            <column name="total_executed_rate" type="numeric"/>
+            <column name="started" type="numeric"/>
+            <column name="started_rate" type="numeric"/>
+            <column name="started_late" type="numeric"/>
+            <column name="started_late_rate" type="numeric"/>
+            <column name="total_started" type="numeric"/>
+            <column name="total_started_rate" type="numeric"/>
+            <column name="no_started" type="numeric"/>
+            <column name="no_started_rate" type="numeric"/>
+            <column name="execution_level" type="numeric"/>
+            <column name="execution_level_rate" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>
